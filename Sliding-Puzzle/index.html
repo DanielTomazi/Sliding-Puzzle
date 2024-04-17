@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <!-- apparently async doesn't work without a server -->
+    <!-- <script src="./script.js" async></script>  -->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="./assets/puzzle_favicon.ico">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Bully Puzzle :)</title>
+
+</head>
+
+<body>
+
+    <div id="blocker" class="blocker"></div>
+
+    <audio id="move__sound" src="./assets/sounds/move.wav"></audio>
+    <audio id="victory__music" src="./assets/sounds/Dont_Stop_Til_You_Get_Enough.mp3"></audio>
+
+    <div id="start__modal" class="start-modal">
+        <button id="btn__start" class="btn-base">Start</button>
+    </div>
+
+    <section>
+
+        <figure class="meme-face-container">
+            <img src="./assets/meme-face.png" alt="Bully maguire meme face">
+        </figure>
+
+        <div id="scoreboard__container" class="scoreboard-container">
+
+            <div>
+                <span>Time: </span>
+                <span id="chronometer__number"></span>
+            </div>
+
+            <div>
+                <span>Moves: </span>
+                <span id="moves__counter"></span>
+            </div>
+
+        </div>
+
+        <div class="puzzle-container" id="puzzle__container">
+
+            <div id="left__top" class="left top">
+                <img class="x-left y-top" src="./assets/main_image.jpg" alt="Bully maguire dancing">
+                <div class="cover"></div>
+            </div>
+
+            <div id="center__top" class="center top">
+                <img class="x-mid y-top" src="./assets/main_image.jpg" alt="Bully maguire dancing">
+                <div class="cover"></div>
+            </div>
+
+            <div id="right__top" class="right top">
+                <img class="x-right y-top" src="./assets/main_image.jpg" alt="Bully maguire dancing">
+                <div class="cover"></div>
+            </div>
+
+            <!-- End of the first line ------------------------------------------ -->
+
+            <div id="left__middle" class="left middle">
+                <img class="x-left y-mid" src="./assets/main_image.jpg" alt="Bully maguire dancing">
+                <div class="cover"></div>
+            </div>
+
+            <div id="center__middle" class="center middle">
+                <img class="x-mid y-mid" src="./assets/main_image.jpg" alt="Bully maguire dancing">
+                <div class="cover"></div>
+            </div>
+
+            <div id="right__middle" class="right middle">
+                <img class="x-right y-mid" src="./assets/main_image.jpg" alt="Bully maguire dancing">
+                <div class="cover"></div>
+            </div>
+
+            <!-- End of the second line ------------------------------------------ -->
+            <!-- At first, this will always be the missing piece -->
+            <!-- <div id="left__bottom" class="left bottom">
+                <img class="x-left y-bottom" src="./assets/main_image.jpg" alt="Bully maguire dancing">
+                <div class="cover"></div>
+            </div> -->
+
+            <div id="center__bottom" class="center bottom">
+                <img class="x-mid y-bottom" src="./assets/main_image.jpg" alt="Bully maguire dancing">
+                <div class="cover"></div>
+            </div>
+
+            <div id="right__bottom" class="right bottom">
+                <img class="x-right y-bottom" src="./assets/main_image.jpg" alt="Bully maguire dancing">
+                <div class="cover"></div>
+            </div>
+        </div>
+
+        <div class="btn-shuffle-container">
+            <button id="btn__shuffle" class="btn-base btn-action">SHUFFLE</button>
+        </div>
+
+        <div class="btn-solve-container">
+            <button id="btn__solve" class="btn-base btn-action">SOLVE</button>
+        </div>
+
+    </section>
+
+</body>
+
+<script src="./script.js" type="module"></script>
+<script src="./checkMovebility.js" type="module"></script>
+<script src="./solver.js" type="module"></script>
+
+</html>

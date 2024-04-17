@@ -1,0 +1,295 @@
+:root{
+    font-size: 10px;
+}
+
+@font-face {
+    font-family: 'spider-man';
+    src: URL('./assets/fonts/HOMOARAK.TTF') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+}
+
+section{
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    background-image: url('./assets/mid_back.jpg');
+    background-repeat: repeat;
+    margin: auto;
+    max-width: 1600px;
+}
+
+.blocker{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    display: none;
+}
+
+.start-modal{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+    opacity: 0.9;
+}
+
+.btn-base{
+    cursor: pointer;
+    text-align: center;
+    width: 25rem;
+    height: 10rem;
+    background-color: #e4eee9;
+    background-image: linear-gradient(315deg, #e4eee9 0%, #93a5ce 74%);
+    font-family: "spider-man";
+    font-size: 4.5rem;
+    border: 2px solid black;
+    box-shadow: #93a5ce -.5rem .5rem, #e4eee9 -1rem 1rem;
+    transition: all linear .1s;
+}
+
+.btn-base:active {
+    box-shadow: #e4eee9 -.1rem .1rem;
+    margin: 0 0 -.5rem -.5rem;
+}
+
+.btn-action {
+    display: none;
+
+    width: 100%;
+    height: 100%;
+    font-size: 2.5rem;
+}
+
+.btn-shuffle-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 4rem;
+    bottom: 3rem;
+    width: 20rem;
+    height: 10rem;
+    padding: 0px 0px 3.5rem .5rem;
+}
+
+.btn-solve-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 4rem;
+    bottom: 3rem;
+    width: 20rem;
+    height: 10rem;
+    padding: 0px 0px 3.5rem .5rem;
+}
+
+.scoreboard-container{
+    display: none;
+
+    position: absolute;
+    left: 2rem;
+    top: 2rem;
+    background-image: linear-gradient(315deg, #e4eee9 0%, #93a5ce 74%);
+    padding: 1rem;
+    border-radius: 2rem;
+    border: .2rem solid black;
+    font-family: "spider-man";
+    font-size: 2.5rem;
+
+}
+
+.meme-face-container{
+    position: absolute;
+    width: 10rem;
+    right: 0;
+    top: 0;
+    margin-top: -.4rem;
+}
+
+.meme-face-container img{
+    cursor: pointer;
+    width: 100%;
+    transform: rotate(180deg);
+}
+
+.puzzle-container {
+    position: relative;
+    width: 61.4rem;
+    height: 61.4rem;
+    margin: 1.5rem auto;
+    padding: .5rem;
+
+    background-image: url("./assets/board_back.jpg");
+    background-size: cover;
+}
+
+.puzzle-container div {
+    position: absolute;
+    overflow: hidden;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 1rem;
+    transition: all linear .1s;
+    cursor:grabbing;
+
+    /* prevent player from selecting the pieces elements */
+
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    user-select: none;
+    /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+.puzzle-container div img {
+    width: 60rem;
+    height: 60rem;
+}
+
+.cover {
+    /* prevent player from dragging the image on click */
+    left: 0;
+    top: 0;
+    flex: 1;
+}
+
+/* image pieces styles --------------- */
+
+.x-left {
+    margin-left: 0rem;
+}
+
+.x-mid {
+    margin-left: -20rem;
+}
+
+.x-right {
+    margin-left: -40rem;
+}
+
+.y-top {
+    margin-top: 0rem;
+}
+
+.y-mid {
+    margin-top: -20rem;
+}
+
+.y-bottom {
+    margin-top: -40rem;
+}
+
+/* Image pieces containers | positions --------------------------------- */
+
+.left {
+    left: .5rem;
+}
+
+.center {
+    left: 20.5rem;
+}
+
+.right {
+    left: 40.5rem;
+}
+
+.top {
+    top: .5rem;
+}
+
+.middle {
+    top: 20.5rem;
+}
+
+.bottom {
+    top: 40.5rem;
+}
+
+
+/* --------------------------------- */
+
+@media(max-width: 1250px){
+    :root{
+        font-size: 8px;
+    }
+}
+
+@media(max-width: 1000px){
+    :root{
+        font-size: 6px;
+    }
+}
+
+@media(max-width: 800px){
+
+    section{
+        height: 85vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+@media(max-width: 650px){
+    :root{
+        font-size: 5px;
+    }
+
+    .btn-base{
+        width: 35rem;
+        height: 15rem;
+        font-size: 7rem;
+    }
+
+    .btn-action {
+        width: 100%;
+        height: 100%;
+        font-size: 3.3rem;
+    }
+
+    .btn-shuffle-container {
+        width: 27rem;
+        height: 13rem;
+    }
+    
+    .btn-solve-container {
+        width: 27rem;
+        height: 13rem;
+    }
+
+    .scoreboard-container{
+        padding: 1rem;
+        font-size: 4rem;
+    }
+
+    .meme-face-container{
+        width: 15rem;
+        margin-top: -.4rem;
+    }
+}
