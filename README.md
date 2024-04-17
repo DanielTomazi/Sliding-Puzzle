@@ -1,5 +1,5 @@
 # Sliding Puzzle Game
-Teste o jogo aqui --> https://sliding-puzzle-j82q8euu3-daniels-projects-96500a11.vercel.app
+Teste o jogo aqui --> https://sliding-puzzle-pi.vercel.app
 ******************
 Quebra-cabeça deslizante criado com HTML, CSS e JavaScript inspirado em uma cena de Homem Aranha 3.
 
