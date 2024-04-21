@@ -1,5 +1,5 @@
 # Sliding Puzzle Game
-Teste o jogo aqui --> https://sliding-puzzle-pi.vercel.app
+Teste o jogo aqui ---> https://sliding-puzzle-pi.vercel.app
 
 ![image](https://github.com/DanielTomazi/Sliding-Puzzle/assets/125170893/03182b20-8461-42a4-aab9-a5e51b2d91bd)
 ******************
