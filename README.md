@@ -1,5 +1,5 @@
 # Sliding Puzzle Game
-Teste o jogo aqui ---> https://sliding-puzzle-pi.vercel.app
+Test the game here: https://sliding-puzzle-pi.vercel.app
 ***
 Sliding puzzle created with HTML, CSS, and JavaScript, using a scene from Spider-Man 3 as the base image.
 
